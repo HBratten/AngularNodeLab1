@@ -1,1 +1,30 @@
-<p>products works!</p>
+<h1>The Second Greatest Grocery Store Ever!</h1>
+
+<form class="addForm" #cartForm="ngForm" (ngSubmit)="addItem(cartForm)">
+  <input type="text" name="product" ngModel placeholder="product" />
+  <input type="number" name="price" ngModel placeholder="price" />
+  <input type="number" name="quantity" ngModel placeholder="quantity" />
+  <button>Add Item :]</button>
+</form>
+
+<form
+  class="editForm"
+  *ngIf="showEditForm"
+  #editForm="ngForm"
+  (ngSubmit)="updateItem(editForm, itemToEdit.id)"
+>
+  <h1>Edit Quantity!</h1>
+  <label for="quantity">Quantity: </label>
+  <input type="number" name="quantity" [ngModel]="itemToEdit.quantity" />
+  <button>Update Quantity</button>
+</form>
+
+<div class="cart">
+  <div class="items" *ngFor="let item of cart">
+    <p>Name: {{ item.product }}</p>
+    <p>Type: {{ item.price }}</p>
+    <p>Quantity: {{ item.quantity }}</p>
+    <button class="deleteButton" (click)="deleteItem(item.id)">X</button>
+    <button (click)="[setItemToEdit(item), toggleEditForm()]">Edit</button>
+  </div>
+</div>

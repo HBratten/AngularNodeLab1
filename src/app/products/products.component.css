@@ -1,0 +1,58 @@
+:host {
+  font-family: "Lexend Deca", sans-serif;
+}
+h1 {
+  color: #fec9f1;
+  text-shadow: 1px 1px #b486ab;
+}
+
+.items {
+  border: 2px solid #b486ab;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  height: 200px;
+  width: 200px;
+  background-color: #fec9f1;
+  position: relative;
+}
+
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.addForm {
+  margin: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-family: "Lexend Deca", sans-serif;
+  color: #82667f;
+}
+
+button {
+  background-color: #b486ab;
+  font-family: "Lexend Deca", sans-serif;
+  border-radius: 5px;
+  border-color: #b486ab;
+  color: #fec9f1;
+  padding: 5px;
+}
+
+.deleteButton {
+  position: absolute;
+  margin: 0px;
+  right: -10px;
+  top: -10px;
+  padding: 10px;
+}
+
+.editForm {
+  margin: 10px;
+  color: #fec9f1;
+}
